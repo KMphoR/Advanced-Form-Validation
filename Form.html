@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION</title>
+    <link rel="stylesheet" href="Styles.css">
+    <script src="FormValiadtion.js"></script>
+</head>
+
+<body onload="defaultSettings()">
+    <div id="LeftBackground">
+        <form class="MainForm">
+            <h1 id="MainHeader">Basic Details</h1>
+            <div class='FormTextInputsDiv'>
+                <label for="fname" id="lblfname">First name:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="John" class="FormInputs" onchange="validName()">
+                <i name="NameIcon" id="NameIcon" class="fas fa-check"></i>
+            </div>
+            <div class='FormTextInputsDiv'>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Doe" class="FormInputs"
+                    onchange="validSurname()">
+                <i name="NameIcon" id="SurnameIcon" class="fas fa-check"></i>
+            </div>
+
+            <div class='FormTextInputsDiv'>
+                <label for="email">Email ID:</label><br>
+                <input type="text" id="email" name="email" placeholder="johndoe@provider.co.za" class="FormInputs"
+                    onchange="validEmail()">
+                <i name="EmailIcon" id="EmailIcon" class="fas fa-check"></i>
+            </div>
+            <div class='FormTextInputsDiv'>
+                <label for="userID">Your User ID:</label><br>
+                <input type="text" id="userID" name="userID" placeholder="J0hn_D03" class="FormInputs" onchange ="ValidUserCode()">
+                <i name="UserLockIcon" id="UserLockIcon" class="fas fa-lock"></i>
+            </div>
+
+            <div id='CountryDiv'>
+                <label for="country">Country:</label><br>
+                <select name="country" id="country" class="FormInputs">
+                    <option value="South Africa">South Africa</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+            </div>
+            <div id='StateDiv'>
+                <label for="state">State:</label><br>
+                <select name="state" id="state" class="FormInputs">
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="Western Cape">Western Cape</option>
+                    <option value="Free State">Free Sate</option>
+                </select>
+            </div>
+            <div id='CityDiv'>
+                <label for="city">City:</label><br>
+                <select name="city" id="city" class="FormInputs">
+                    <option value="Johannesburg">Johannesburg</option>
+                    <option value="Pretoria">Pretoria</option>
+                    <option value="Cape Town">Cape Town</option>
+                </select>
+            </div>
+
+            <div class='FormTextInputsDiv'>
+                <label for="PhoneNum">Phone number</label><br>
+                <input type="text" id="PhoneNum" name="PhoneNum" placeholder="xxx-xxx-xxxx" class="FormInputs" >
+            </div>
+            <div class='FormTextInputsDiv'>
+                <input type="text" id="RefrenceCode" name="RefrenceCode" placeholder="Reference Code"
+                    class="FormInputs">
+            </div>
+            <div class="ButtonsDiv">
+                <input type="submit" value="Reset All" id="ResetButton">
+                <input type="submit" value="Continue" id="CountinueButton" onclick="">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

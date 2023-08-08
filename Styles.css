@@ -1,0 +1,146 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css";
+
+body{
+    font-family: 'calibri';
+}
+label{
+    color: gray;
+    font-size: small;
+}
+input{
+    color: black;
+    outline: none;
+    border-bottom-width: 1px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+input:focus{
+    outline: none;
+    border-color: #2f9cf0;
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+#LeftBackground{
+    background-color: #2f9cf0;
+    width: 70%;
+    height: 450px;
+    display: inline-block;
+    margin-left: 15%;
+    border-radius: 5px;
+}
+.MainForm{
+    display: inline-block;
+    width: 90%;
+    height: 450px;
+    background-color: white;
+    position: relative;
+    left: 10%;
+    
+}
+#MainHeader{
+    color: #48a5ea;
+    padding: 10px 0 10px 20px;
+    font-size: x-large;
+    font-style: normal;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.FormTextInputsDiv{
+    display: inline-block;
+    width:47%;
+    padding-left: 2%;
+    margin-top: 20px;
+}
+.FormInputs{
+    width:100%;
+    border-color: white; 
+}
+.FormInputs:focus{
+    outline: none;
+    border-color: #2f9cf0;
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+#CountryDiv{
+    display: inline-block;
+    width: 47%;
+    padding-left: 2%;
+    margin-top: 20px;
+}
+#StateDiv{
+    display: inline-block;
+    width: 22.5%;
+    padding-left: 2%;
+    margin-top: 20px;
+}
+#CityDiv{
+    display: inline-block;
+    width: 22.5%;
+    padding-left: 2%;
+    margin-top: 20px;
+}
+#ResetButton{
+    margin-left: 2%;
+    border-style: solid;
+    border-width: 1px;
+    background-color: inherit;
+    border-radius: 20px;
+    margin-top: 45px;
+    color: gray;
+    height: 30px;
+    width: 15%;
+}
+#CountinueButton{
+    background-color: #2f9cf0;
+    border-style: solid;
+    border-radius: 20px;
+    position: absolute;
+    left: 80%;
+    width: 15%;
+    margin-top: 45px;
+    border-color: #2f9cf0;
+    color: white;
+    height: 30px;
+}
+.ButtonsDiv{
+    width: 100%;
+}
+#EmailIcon{
+    position: absolute;
+    left: 47%;
+    top: 40.5%;
+}
+#UserLockIcon{
+    position: absolute;
+    left: 96%;
+    top: 40.5%;
+}
+#NameIcon{
+    position: absolute;
+    left: 47%;
+    top: 27%;
+}
+#PhoneIcon{
+    position: absolute;
+    left: 47%;
+    top: 67.5%;
+}
+
+#SurnameIcon{
+    position: absolute;
+    left: 96%;
+    top: 27%;
+}
+.fa-check{
+    color: green;
+}
+.fa-diaspora{
+    color: red;
+}
