@@ -5,76 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORM VALIDATION</title>
     <link rel="stylesheet" href="Styles.css">
-    <script src="FormValiadtion.js"></script>
 </head>
 
 <body onload="defaultSettings()">
-    <div id="LeftBackground">
-        <form class="MainForm">
+    <div id="Background">
+        <form id="form" class="MainForm" action="#" autocomplete="on">
             <h1 id="MainHeader">Basic Details</h1>
             <div class='FormTextInputsDiv'>
                 <label for="fname" id="lblfname">First name:</label><br>
-                <input type="text" id="fname" name="fname" placeholder="John" class="FormInputs" onchange="validName()">
+                <input type="text" id="fname" name="name" placeholder="John" class="FormInputs" onchange="validName()" required/>
                 <i name="NameIcon" id="NameIcon" class="fas fa-check"></i>
             </div>
             <div class='FormTextInputsDiv'>
                 <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname" placeholder="Doe" class="FormInputs"
-                    onchange="validSurname()">
-                <i name="NameIcon" id="SurnameIcon" class="fas fa-check"></i>
+                <input type="text" id="lname" name="lname" placeholder="Doe" class="FormInputs" onchange="validSurname()" required />
+                <i name="SurnameIcon" id="SurnameIcon" class="fas fa-check"></i>
             </div>
 
             <div class='FormTextInputsDiv'>
                 <label for="email">Email ID:</label><br>
-                <input type="text" id="email" name="email" placeholder="johndoe@provider.co.za" class="FormInputs"
-                    onchange="validEmail()">
+                <input type="text" id="email" name="email" placeholder="johndoe@provider.co.za" class="FormInputs" onchange="validEmail()" required />
                 <i name="EmailIcon" id="EmailIcon" class="fas fa-check"></i>
             </div>
             <div class='FormTextInputsDiv'>
                 <label for="userID">Your User ID:</label><br>
-                <input type="text" id="userID" name="userID" placeholder="J0hn_D03" class="FormInputs" onchange ="ValidUserCode()">
+                <input type="text" id="userID" name="userID" placeholder="J0hn_D03" class="FormInputs" onchange ="ValidUserCode()" required>
                 <i name="UserLockIcon" id="UserLockIcon" class="fas fa-lock"></i>
             </div>
 
             <div id='CountryDiv'>
                 <label for="country">Country:</label><br>
-                <select name="country" id="country" class="FormInputs">
+                <select name="country" id="country" class="FormInputs" onchange="updateStates()" required>
+                    <option value="">Select Country</option>
                     <option value="South Africa">South Africa</option>
                     <option value="India">India</option>
                     <option value="USA">USA</option>
-                    <option value="UK">UK</option>
+                    <option value="Canada">Canada</option>
                 </select>
             </div>
             <div id='StateDiv'>
                 <label for="state">State:</label><br>
-                <select name="state" id="state" class="FormInputs">
-                    <option value="Gauteng">Gauteng</option>
-                    <option value="Western Cape">Western Cape</option>
-                    <option value="Free State">Free Sate</option>
+                <select name="state" id="state" class="FormInputs" onchange="updateCities()" required>
+                    <option value="">Select State</option>
+                    <!--Options stored in an array to make it adaptive-->
                 </select>
             </div>
             <div id='CityDiv'>
                 <label for="city">City:</label><br>
-                <select name="city" id="city" class="FormInputs">
-                    <option value="Johannesburg">Johannesburg</option>
-                    <option value="Pretoria">Pretoria</option>
-                    <option value="Cape Town">Cape Town</option>
+                <select name="city" id="city" class="FormInputs" required>
+                    <option value="">Select City</option>
+                    <!--Options stored in an array to make it adaptive-->
                 </select>
             </div>
 
             <div class='FormTextInputsDiv'>
-                <label for="PhoneNum">Phone number</label><br>
-                <input type="text" id="PhoneNum" name="PhoneNum" placeholder="xxx-xxx-xxxx" class="FormInputs" >
+                <label for="phoneNum">Phone number</label><br>
+                <input type="text" id="phoneNum" name="phoneNum" placeholder="xxx-xxx-xxxx" class="FormInputs" onchange="ValidPhoneNum()" required>
+                <i name="PhoneNumIcon" id="PhoneNumIcon" class="fas fa-lock"></i>
             </div>
             <div class='FormTextInputsDiv'>
-                <input type="text" id="RefrenceCode" name="RefrenceCode" placeholder="Reference Code"
-                    class="FormInputs">
+                <input type="text" id="refrenceCode" name="refrenceCode" placeholder="Reference Code" class="FormInputs" onchange ="ValidRefrenceCode()" required>
+                <i name="RefrenceCodeIcon" id="RefrenceCodeIcon" class="fas fa-lock"></i>
             </div>
             <div class="ButtonsDiv">
-                <input type="submit" value="Reset All" id="ResetButton">
-                <input type="submit" value="Continue" id="CountinueButton" onclick="">
+                <button type="reset" id="ResetButton">Reset All</button>
+                <button onclick="details()" type="button" id="CountinueButton">Continue</button>
             </div>
         </form>
     </div>
+
+    <div id="fileSizeOutput" style="display: none;">
+                                     
+    <label for="fileInput">Select a file:</label>
+    <input type="file" id="fileInput"></input>
+    <button onclick="calculateFileSize()">Calculate File size</button>
+    <p id="result"></p>
+    <ul class="list">
+    <h2>Entered Details</h2>
+    <li id="outName"></li>
+    <li id="outSurname"></li>
+    <li id="outEmail"></li>
+    <li id="outUserId"></li>
+    <li id="outCountry"></li>
+    <li id="outState"></li>
+    <li id="outCity"></li>
+    <li id="outNumber"></li>
+    <li id="outReference"></li>
+
+    </ul>
+    <button onclick="closePage()">Close Page</button>
+    </div>
+
+<script src="FormValiadtion.js"></script>
 </body>
 </html>
